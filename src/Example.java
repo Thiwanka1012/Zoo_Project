@@ -13,17 +13,23 @@ class Fish{
     String details="Fish Details";
 }
 
-class PrintInformation{
-    String details;
+class PrintInformation <T>{
+    T details;
 
-    PrintInformation(Lion lion){
-        details=lion.details;
+    PrintInformation(T details){
+        this.details=details;
+
     }
 
     public void printData(){
         System.out.println(details);
     }
-}
+
+
+
+
+    }
+
 
 
 
@@ -35,7 +41,10 @@ public class Example {
     public static void main(String[] args) {
 
         Lion lion=new Lion();
-        PrintInformation information=new PrintInformation(lion);
+
+        PrintInformation information=new PrintInformation<>(lion);
+
         information.printData();
+
     }
 }
